@@ -16,6 +16,9 @@
 //Check if the number is divisible by both 3 and 5. If yes, substract it from sum because it has been added to sum twice
 //Return sum
 function sumOfMultiplesOfThreeAndFive(number) {
+    if (number < 0) {
+        return 0;
+    }
     let sum = 0;
     for (let i = 0; i < number; i++) {
         if (i % 3 === 0) {
@@ -31,4 +34,4 @@ function sumOfMultiplesOfThreeAndFive(number) {
     return sum;
 }
 
-console.log(sumOfMultiplesOfThreeAndFive(23));
+console.log(sumOfMultiplesOfThreeAndFive(-23));
