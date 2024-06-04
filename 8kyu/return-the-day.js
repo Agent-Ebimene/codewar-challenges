@@ -98,3 +98,15 @@ function whatday(num) {
     if (num >= 1 && num <= 7) { return week[num] }
     else { return "Wrong, please enter a number between 1 and 7" }
 }
+
+
+
+const whatday = num =>
+    [`Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`][--num] || `Wrong, please enter a number between 1 and 7`;
+
+
+function whatday(num) {
+    return 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' ')[num - 1]
+        ||
+        'Wrong, please enter a number between 1 and 7';
+}
