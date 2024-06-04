@@ -17,10 +17,39 @@
 // My Solution
 // Century years are years ending with two zeros: 1600,1000,2000,3000,200,300,400 etc
 
-const yearDays = (year) => {
-    const yearToCheck = parseInt(year);
-    return yearToCheck % 100 === 0 ? yearToCheck % 400 === 0 ? `${yearToCheck} has 366 days` : `${yearToCheck} has 365 days` : yearToCheck % 4 === 0 ? `${yearToCheck} has 366 days` : `${yearToCheck} has 365 days`
+// const yearDays = (year) => {
+//     const yearToCheck = parseInt(year);
+//     return yearToCheck % 100 === 0 ? yearToCheck % 400 === 0 ? `${yearToCheck} has 366 days` : `${yearToCheck} has 365 days` : yearToCheck % 4 === 0 ? `${yearToCheck} has 366 days` : `${yearToCheck} has 365 days`
 
+// }
+
+
+// Other Solutions 
+
+// function yearDays(year) {
+//     var result = 365;
+//     // if divisible by 400 or divisible by 4 and not divisible by 100(Not century years)
+//     if (year % 400 == 0 || (year % 4 == 0 && year % 100 !== 0)) {
+//         result = 366;
+//     }
+
+//     return year + ' has ' + result + ' days';
+// }
+
+
+// I am personally excited by this solution
+function yearDays(year) {
+    const isCentury = year % 100 === 0;
+    const isLeap = year % (isCentury ? 400 : 4) === 0;
+    const days = isLeap ? 366 : 365;
+    return `${year} has ${days} days`;
+}
+
+// Another Lovely solution
+function yearDays(year) {
+    return `${year} has ${(year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) ? 366 : 365} days`;
 }
 
 console.log(yearDays(2016))
+
+
