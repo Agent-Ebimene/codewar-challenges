@@ -35,3 +35,27 @@ function sumOfMultiplesOfThreeAndFive(number) {
 }
 
 console.log(sumOfMultiplesOfThreeAndFive(-23));
+
+
+
+// Other Solutions
+function solution(number) {
+    sum = 0
+    for (i = 3; i < number; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+
+
+function solution(number) {
+    var sum = 0;
+    while (number > 0) {
+        number--;
+        sum += (!(number % 3)) ? number : (!(number % 5)) ? number : 0;
+    }
+    return sum;
+}
