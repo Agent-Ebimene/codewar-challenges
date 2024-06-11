@@ -10,11 +10,11 @@
 
 // My Solution
 // initialize a sum variable to add the sum
-//Loop up to the number
-//Check if the number is divisible by 3.If yes, add to sum.
-//Check if the number is divisible by 5.If yes, add to sum.
-//Check if the number is divisible by both 3 and 5. If yes, substract it from sum because it has been added to sum twice
-//Return sum
+// Loop up to the number
+// Check if the number is divisible by 3.If yes, add to sum.
+// Check if the number is divisible by 5.If yes, add to sum.
+// Check if the number is divisible by both 3 and 5. If yes, substract it from sum because it has been added to sum twice
+// Return sum
 function sumOfMultiplesOfThreeAndFive(number) {
     if (number < 0) {
         return 0;
